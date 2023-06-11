@@ -1,0 +1,48 @@
+Maximize
+
+20.0 x_0 + 10.0 x_1 + 5.0 x_2
+
+
+Subject To
+
+a0: 0.5 x_0 + 0.0 x_1 + 0.0 x_2 <= 5
+a1: 0.4 x_0 + 0.0 x_1 + 0.0 x_2 <= 4
+a2: 0.1 x_0 + 0.0 x_1 + 0.0 x_2 <= 1
+a3: 0.0 x_0 + 0.2 x_1 + 0.0 x_2 <= 2
+a4: 0.0 x_0 + 0.8 x_1 + 0.0 x_2 <= 8
+a5: 0.0 x_0 + 0.0 x_1 + 1.0 x_2 <= 1
+
+
+
+Bounds
+
+
+x_0 <= 10.0
+x_0 <= 12.5
+x_0 <= 50.0
+x_0 <= Infinity
+x_0 <= Infinity
+x_0 <= Infinity
+x_1 <= Infinity
+x_1 <= Infinity
+x_1 <= Infinity
+x_1 <= 20.0
+x_1 <= 5.0
+x_1 <= Infinity
+x_2 <= Infinity
+x_2 <= Infinity
+x_2 <= Infinity
+x_2 <= Infinity
+x_2 <= Infinity
+x_2 <= 1.0
+
+
+
+
+General
+
+ x_0 x_1 x_2
+
+
+
+End

@@ -1,0 +1,41 @@
+head section
+
+Integer getTrabajos()
+Integer getInvestigadores()
+Integer getEspecialidades()
+
+Integer getCapacidad(Integer i)
+Integer getCalidad(Integer i)
+Integer diasNecesito(Integer j, Integer k)
+Integer seleccionaEspecialidad(Integer j, Integer k)
+Integer totalTrabajo(Integer j)
+
+Integer n = getInvestigadores()
+Integer m = getTrabajos()
+Integer e = getEspecialidades()
+
+goal section
+
+max sum(getCalidad(j) y[j], j in 0 .. m)
+
+constraints section
+
+sum(x[i,j], j in 0 .. m) <= getCapacidad(i), i in 0 .. n
+
+
+//tt(j) <= sum(x[i, j]) | ei(i) == et(j))
+sum(x[i,j], i in 0 .. n | seleccionaEspecialidad(i, k) = 1) - diasNecesito(j, k) y[j] = 0, j in 0 .. m, k in 0 .. e
+
+
+bounds section
+
+x[i,j] <= getCapacidad(j) + 1, i in 0 .. n, j in 0 .. m
+
+
+int
+
+x[i,j], i in 0 .. n, j in 0 .. m
+
+bin
+
+y[j], j in 0 .. m

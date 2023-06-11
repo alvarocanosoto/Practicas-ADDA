@@ -1,0 +1,36 @@
+head section
+
+Integer getCursos()
+Integer getTematicas()
+Integer getCentros()
+Integer getCentrosDiferentes()
+
+Double getPrecioInscripcion(Integer i)
+Integer seleccionaTematica(Integer i, Integer j)
+Integer seleccionaCentro(Integer i, Integer k)
+
+
+Integer n = getCursos()
+Integer m = getTematicas()
+Integer nc = getCentros()
+Integer maxCentros = getCentrosDiferentes()
+
+
+goal section
+
+min sum(getPrecioInscripcion(i) x[i] , i in 0 .. n)
+
+constraints section
+
+sum(seleccionaTematica(i,j) x[i], i in 0 .. n) >= 1, j in 0 .. m
+
+sum(y[k], k in 0 .. nc) <= maxCentros
+
+seleccionaCentro(i,k) x[i] - y[k] <= 0, i in 0 .. n, k in 0 .. nc
+
+bin 
+
+x[i], i in 0 .. n	//se selecciona el curso i
+y[k], k in 0 .. nc //se selecciona algun curso del centro k
+
+

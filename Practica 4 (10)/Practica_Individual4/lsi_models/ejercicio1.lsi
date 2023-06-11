@@ -1,0 +1,29 @@
+head section
+
+Integer getTipos()
+Integer getVariedades()
+Integer getKgDisponiblesMax()
+
+Integer getKgDisponibles(Integer i)
+Double getBeneficio(Integer i)
+Double getPorcentajeVariedad(Integer i, Integer j)
+Double getBounds(Integer i, Integer j)
+
+Integer n = getTipos()
+Integer m = getVariedades()
+
+
+goal section
+
+max sum(getBeneficio(i) x[i] , i in 0 .. m)
+
+constraints section
+
+sum(getPorcentajeVariedad(i,j) x[i], i in 0 .. m) <= getKgDisponibles(j), j in 0 .. n
+
+bounds section
+x[i] <= getBounds(i,j), i in 0 .. m, j in 0 .. n
+
+int 
+
+x[i], i in 0 .. m
