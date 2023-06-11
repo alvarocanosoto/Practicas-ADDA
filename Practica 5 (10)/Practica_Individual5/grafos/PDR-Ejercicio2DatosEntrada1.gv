@@ -1,0 +1,17 @@
+strict digraph G {
+  1 [ style="solid" label="Ejercicio2Vertex [index=2, remainingTem=[1, 2, 3, 4, 5], selectedCent=[]]" ];
+  2 [ style="solid" label="Ejercicio2Vertex [index=3, remainingTem=[1, 2, 3, 4, 5], selectedCent=[]]" ];
+  3 [ style="solid" label="Ejercicio2Vertex [index=1, remainingTem=[1, 2, 3, 4, 5], selectedCent=[]]" ];
+  4 [ style="solid" label="Ejercicio2Vertex [index=2, remainingTem=[2, 3, 5], selectedCent=[0]]" ];
+  5 [ style="solid" label="Ejercicio2Vertex [index=3, remainingTem=[2, 3, 5], selectedCent=[0]]" ];
+  6 [ style="bold" label="Ejercicio2Vertex [index=0, remainingTem=[1, 2, 3, 4, 5], selectedCent=[]]" ];
+  7 [ style="bold" label="Ejercicio2Vertex [index=1, remainingTem=[5], selectedCent=[0]]" ];
+  8 [ style="bold" label="Ejercicio2Vertex [index=2, remainingTem=[5], selectedCent=[0]]" ];
+  1 -> 2 [ style="solid" label="0; 0,0" ];
+  3 -> 1 [ style="solid" label="0; 0,0" ];
+  4 -> 5 [ style="solid" label="0; 0,0" ];
+  3 -> 4 [ style="solid" label="1; 3,0" ];
+  6 -> 3 [ style="solid" label="0; 0,0" ];
+  7 -> 8 [ style="bold" label="0; 0,0" ];
+  6 -> 7 [ style="bold" label="1; 10,0" ];
+}
